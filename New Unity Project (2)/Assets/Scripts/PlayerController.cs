@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour {
     private int frameCountSince;
     Animator anim;
     private float canJump = 0f;
-    private float timeTransition = 1.5f;
+    private float timeTransition = .5f;
 
 	// Use this for initialization
 	void Start () {
@@ -69,5 +69,10 @@ public class PlayerController : MonoBehaviour {
 			SceneManager.LoadScene("LoseScreen");
 		}
 	}
+	}
+	
+	public void DestroyIt()
+	{
+		Destroy(this);
 	}
 }

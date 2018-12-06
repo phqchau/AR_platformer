@@ -22,9 +22,5 @@ public class HealthManager : MonoBehaviour {
 	public void HurtPlayer(int damage)
 	{
 		currentHealth -= damage;
-		if(currentHealth <= 0)
-		{
-			SceneManager.LoadScene("LoseScreen");
-		}
 	}
 }
