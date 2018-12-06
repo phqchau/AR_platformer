@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour {
     Animator anim;
     private float canJump = 0f;
     private float timeTransition = .5f;
+    private int isJumping = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -36,12 +37,16 @@ public class PlayerController : MonoBehaviour {
 			anim.SetBool("IsJump", true);
                 	moveDirection.y = jumpForce;
 			canJump = Time.time + .75f;
+                 moveSpeed += 2;
+                 isJumping = 1;
 		}
         }
 
-	if (moveDirection.y <= .5)
+	if (moveDirection.y <= .5 && isJumping == 1)
 	{
 		anim.SetBool("IsJump", false);
+           moveSpeed -= 2;
+           isJumping = 0;
 	}
 
 	if (CrossPlatformInputManager.GetAxis("Horizontal") != 0 || CrossPlatformInputManager.GetAxis("Vertical") != 0)

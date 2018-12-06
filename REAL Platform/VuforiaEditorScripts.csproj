@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{EEA30431-1857-E1E8-647C-3BB7D71380EC}</ProjectGuid>
+    <ProjectGuid>{7566D542-132A-0403-D20A-9B052B4CA918}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>VuforiaEditorScripts</AssemblyName>
@@ -345,7 +345,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="VuforiaScripts.csproj">
-      <Project>{B5318F06-9A1F-6C6B-1156-A9D841A5F785}</Project>      <Name>VuforiaScripts</Name>    </ProjectReference>
+      <Project>{12862A13-F723-1712-F891-1A9CA8033CDE}</Project>      <Name>VuforiaScripts</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
